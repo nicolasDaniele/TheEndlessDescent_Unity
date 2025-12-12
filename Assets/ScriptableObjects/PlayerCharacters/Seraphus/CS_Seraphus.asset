@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25015af3a61f33c4fa28717654b38bf1, type: 3}
-  m_Name: PC_Liora
+  m_Script: {fileID: 11500000, guid: 8e0ff47488169724cafae0e75f83ca57, type: 3}
+  m_Name: CS_Seraphus
   m_EditorClassIdentifier: 
-  id: 2
-  characterName: Liora
-  prefab: {fileID: 6865329914423396141, guid: d7050474bb16a41458b5489a8dfe5d0c, type: 3}
+  speed: 4
+  attack: 8
+  defense: 5

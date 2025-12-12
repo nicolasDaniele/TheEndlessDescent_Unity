@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   characterName: Seraphus
-  prefab: {fileID: 4483781871332432420, guid: 97ea44480c298be42b7294507e453bde, type: 3}
+  characterClass: Paladin
+  prefab: {fileID: 4295716291311913603, guid: 97ea44480c298be42b7294507e453bde, type: 3}
+  characterStats: {fileID: 11400000, guid: 46d1d3f422daa1549a61128e4c12148b, type: 2}
