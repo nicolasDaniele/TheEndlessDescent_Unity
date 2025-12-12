@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "PlayerInputActions",
+    "maps": [
+        {
+            "name": "PlayerMobileMapping",
+            "id": "b36c8b88-0ced-46ae-8b7c-de8e4e34eecb",
+            "actions": [
+                {
+                    "name": "SetTargetLocation",
+                    "type": "Button",
+                    "id": "227201f7-c9f0-4256-b64f-e4a49d7df224",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Tap",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d0b0737a-e36f-48f3-a684-4bd5ec82e391",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SetTargetLocation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
