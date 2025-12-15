@@ -5,8 +5,13 @@ public class PlayerCharacterDatabase : ScriptableObject
 {
     public PlayerCharacterData[] PlayerCharacters => playerCharacters;
     public int PlayerCharactersCount => playerCharacters.Length;
+    public GameObject SelectedPlayerCharacterPrefab => 
+                        playerCharacters[selectedPlayerCharacterIndex].Prefab;
+    public PlayerCharacterStats SelectedPlayerCharacterStats =>
+                        playerCharacters[selectedPlayerCharacterIndex].CharacterStats;
 
     [SerializeField] private PlayerCharacterData[] playerCharacters = { };
+    
     private int selectedPlayerCharacterIndex;
 
     public PlayerCharacterData GetPlayerCharacterByIndex(int index)
@@ -17,10 +22,5 @@ public class PlayerCharacterDatabase : ScriptableObject
     public void SetSelectedPlayerCharacter(int index)
     {
         selectedPlayerCharacterIndex = index;
-    }
-
-    public GameObject GetSelectedPlayerCharacterPrefab()
-    {
-        return playerCharacters[selectedPlayerCharacterIndex].Prefab;
     }
 }
