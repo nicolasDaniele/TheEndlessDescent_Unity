@@ -1,13 +1,20 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class DungeonManager : MonoBehaviour
 {
     public static DungeonManager Instance => instance;
 
-    [SerializeField]
-    private PlayerCharacterDatabase characterDatabase;
+    [Header("Player Character")]
     [SerializeField]
     private Transform playerCharacterSpawningTransform;
+    [SerializeField]
+    private GameObject defaultPlayerCharacter;
+
+    [Header("Camera")]
+    [SerializeField]
+    private CinemachineCamera followCamera;
+
     private GameObject playerCharacterToSpawn;
     private static DungeonManager instance;
 
@@ -26,22 +33,27 @@ public class DungeonManager : MonoBehaviour
 
     private void Start()
     {
-        if(characterDatabase == null)
-        {
-            Debug.LogWarning("characterDataBase is Not Set");
-            return;
-        }
-
-        playerCharacterToSpawn = characterDatabase.GetSelectedPlayerCharacterPrefab();
+        playerCharacterToSpawn = PlayerCharacterDatabaseAccessor.GetPlayerCharacterPrefab();
 
         if (playerCharacterToSpawn == null)
         {
-            Debug.LogWarning("playerCharacterToSpawn is null!");
+            Debug.LogWarning("[DungeonManager]  PlayerCharacterToSpawn is null!");
+
+            if(defaultPlayerCharacter != null)
+                playerCharacterToSpawn = defaultPlayerCharacter;
+            else
+                Debug.LogWarning("[DungeonManager] DefaultPlayerCharacter is null!");
+
             return;
         }
 
-        Instantiate(playerCharacterToSpawn, 
-                    playerCharacterSpawningTransform.position, 
+        GameObject spawnedCharacter = Instantiate(playerCharacterToSpawn,
+                    playerCharacterSpawningTransform.position,
                     playerCharacterSpawningTransform.rotation);
+
+        if (followCamera != null)
+            followCamera.Target.TrackingTarget = spawnedCharacter.transform;
+        else
+            Debug.LogWarning("[DungeonManager] Camera is not set.");
     }
 }
