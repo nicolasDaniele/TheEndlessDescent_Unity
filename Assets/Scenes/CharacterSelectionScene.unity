@@ -174,7 +174,11 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 03107c9b81262c64a983e8d4804b973c, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 429df2643faa9154f83411133426e2f0, type: 2}
+      objectReference: {fileID: 22100000, guid: a4633d89dcba80443bcc2f2e4e86ef28, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 03107c9b81262c64a983e8d4804b973c, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -291,7 +295,7 @@ Transform:
   m_GameObject: {fileID: 137978699}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.3, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 1.0329, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1038,7 +1042,11 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 5228312fb4420124099f220efabff091, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 6a3d0d9775e981645914ed78d9ae657f, type: 2}
+      objectReference: {fileID: 22100000, guid: 411aafe5111e76c488138f8f376f8d9c, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 5228312fb4420124099f220efabff091, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1122,9 +1130,6 @@ MonoBehaviour:
   isCharacterSelected: 0
   skinnedMeshRenderers: []
   unselectedCharacterMaterial: {fileID: 2100000, guid: 54abd03c8d67a5640808d1735ab31651, type: 2}
-  variantAnimationParamName: Variant
-  minTimeToPlayVariantAnim: 7
-  maxTimeToPlayVariantAnim: 10
   animator: {fileID: 0}
 --- !u!1 &1016671329 stripped
 GameObject:
@@ -1186,7 +1191,11 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 83d5d7532ae6c704fa206be2a16fed15, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 8efec348eb9860342a09f5bc3b66afd1, type: 2}
+      objectReference: {fileID: 9100000, guid: 11075dd67b8b3a946a94f3a289bf0cac, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 83d5d7532ae6c704fa206be2a16fed15, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1216,9 +1225,6 @@ MonoBehaviour:
   isCharacterSelected: 1
   skinnedMeshRenderers: []
   unselectedCharacterMaterial: {fileID: 2100000, guid: 54abd03c8d67a5640808d1735ab31651, type: 2}
-  variantAnimationParamName: Variant
-  minTimeToPlayVariantAnim: 7
-  maxTimeToPlayVariantAnim: 10
   animator: {fileID: 0}
 --- !u!1 &1123512648
 GameObject:
@@ -1630,9 +1636,6 @@ MonoBehaviour:
   isCharacterSelected: 0
   skinnedMeshRenderers: []
   unselectedCharacterMaterial: {fileID: 2100000, guid: 54abd03c8d67a5640808d1735ab31651, type: 2}
-  variantAnimationParamName: Variant
-  minTimeToPlayVariantAnim: 7
-  maxTimeToPlayVariantAnim: 10
   animator: {fileID: 0}
 --- !u!1 &1883386116
 GameObject:

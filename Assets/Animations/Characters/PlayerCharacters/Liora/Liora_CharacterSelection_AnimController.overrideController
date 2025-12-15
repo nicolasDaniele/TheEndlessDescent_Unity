@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Liora_CharacterSelection_AnimController
+  m_Controller: {fileID: 9100000, guid: 11075dd67b8b3a946a94f3a289bf0cac, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -203655887218126122, guid: 05168e160ad91ad428da0b7b727960bf, type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: ef52cd8d1599d16448d2f1cdbc449940, type: 3}
+  - m_OriginalClip: {fileID: -203655887218126122, guid: c2597c992aa42424f8c88ac9c23beb2f, type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: dc0a9f6b21490fc46937dbe75f03bd0a, type: 3}
