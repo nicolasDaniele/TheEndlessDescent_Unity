@@ -60,6 +60,7 @@ public class CharacterMoveToTarget : MonoBehaviour
             if(NavMesh.SamplePosition(hit.point, out NavMeshHit navMeshHit, navMeshSampleDistance, NavMesh.AllAreas))
             {
                 navMeshAgent.SetDestination(navMeshHit.position);
+                animator?.CrossFade(moveAnimationName, transitionDuration);
 
                 StartCoroutine(FaceTarget());
                 StartCoroutine(UpdateAnimation());
@@ -96,7 +97,6 @@ public class CharacterMoveToTarget : MonoBehaviour
             navMeshAgent.velocity.sqrMagnitude > 0.01f ||
             navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance)
         {
-            animator?.CrossFade(moveAnimationName, transitionDuration);
             yield return null;
         }
 
