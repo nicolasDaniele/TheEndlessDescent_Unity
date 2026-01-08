@@ -26,8 +26,6 @@ public class PlayerCharacterDatabaseAccessor : MonoBehaviour
 
         if (characterDatabase == null)
             Debug.LogWarning("[PCDB_Accesor] CharacterDatabase is null");
-        else
-            Debug.Log("[PCDB_Accesor] Found CharacterDatabase");
     }
 
     public static GameObject GetPlayerCharacterPrefab()
