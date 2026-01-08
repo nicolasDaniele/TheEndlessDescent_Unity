@@ -15,6 +15,15 @@ public class DungeonManager : MonoBehaviour
     [SerializeField]
     private CinemachineCamera followCamera;
 
+
+    // TEMPORARY (for spawning the enemy and setting its target)
+    [Header("Temporary")]
+    [SerializeField] 
+    private GameObject enemyToSpawn;
+    [SerializeField]
+    private Transform enemySpawnPoint;
+
+
     private GameObject playerCharacterToSpawn;
     private static DungeonManager instance;
 
@@ -55,5 +64,16 @@ public class DungeonManager : MonoBehaviour
             followCamera.Target.TrackingTarget = spawnedCharacter.transform;
         else
             Debug.LogWarning("[DungeonManager] Camera is not set.");
+
+
+        // TEMPORARY (Enemy spawning and setup)
+        if (enemyToSpawn != null)
+        {
+            GameObject spawnedEnemy = Instantiate(enemyToSpawn,
+                                enemySpawnPoint.position, enemySpawnPoint.rotation);
+            spawnedEnemy.GetComponent<AIController>()?.SetTarget(spawnedCharacter.transform);
+        }
+        else
+            Debug.LogWarning("[DungeonManager] EnemyToSpawn is not set.");
     }
 }
